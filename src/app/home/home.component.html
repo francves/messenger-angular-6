@@ -1,9 +1,11 @@
 <br><br>
 <b>Amigos</b>
 <ng-container *ngFor="let user of friends; let i = index">
-<p *ngIf="user.friend">
+<div *ngIf="user.friend">
+  <a routerLink="/conversation/{{user.uid}}">
   {{i}}. {{user.nick}} - {{user.email}}
-</p>
+  </a>
+</div>
 </ng-container>
 <br>
 <b>No Amigos</b>
