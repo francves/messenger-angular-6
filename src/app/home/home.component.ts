@@ -8,16 +8,53 @@ import { TestBed } from '@angular/core/testing';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  
+  friends: User[];
 
   constructor() { 
-    let usuario: User = {
+    let usuario0: User = {
       nick: "francves",
       age: 25,
       email: "francves@Test.com",
       friend: true,
       uid: 1
     }
-    console.log(usuario);
+    let usuario1: User = {
+      nick: 'Eduardo',
+      age: 24,
+      email: 'ed@aoe.aoe',
+      friend: true,
+      uid: 1
+    };
+    let usuario2: User = {
+      nick: 'Freddy',
+      age: 28,
+      email: 'fred@aoe.aoe',
+      friend: true,
+      uid: 1
+    };
+    let usuario3: User = {
+      nick: 'Yuliana',
+      age: 18,
+      email: 'yuli@aoe.aoe',
+      friend: true,
+      uid: 1
+    };
+    let usuario4: User = {
+      nick: 'Ricardo',
+      age: 17,
+      email: 'rick@aoe.aoe',
+      friend: false,
+      uid: 1
+    };
+    let usuario5: User = {
+      nick: 'Marcos',
+      age: 30,
+      email:'marcos@aoe.aoe',
+      friend: false,
+      uid: 1
+    };
+    this.friends = [usuario0, usuario1, usuario2, usuario3, usuario4, usuario5];
   }
 
   ngOnInit() {
